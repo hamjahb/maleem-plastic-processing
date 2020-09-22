@@ -1,0 +1,54 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Order date:</strong>
+  <%= @order.order_date %>
+</p>
+
+<p>
+  <strong>Customer name:</strong>
+  <%= @order.customer_name %>
+</p>
+
+<p>
+  <strong>Material:</strong>
+  <%= @order.material %>
+</p>
+
+<p>
+  <strong>Filler:</strong>
+  <%= @order.filler %>
+</p>
+
+<p>
+  <strong>Specifications:</strong>
+  <%= @order.specifications %>
+</p>
+
+<p>
+  <strong>Order weight kg:</strong>
+  <%= @order.order_weight_KG %>
+</p>
+
+<p>
+  <strong>Total printed kg:</strong>
+  <%= @order.total_printed_KG %>
+</p>
+
+<p>
+  <strong>Total boxes:</strong>
+  <%= @order.total_boxes %>
+</p>
+
+<p>
+  <strong>Gusset:</strong>
+  <%= @order.gusset %>
+</p>
+
+<p>
+  <strong>Delivered:</strong>
+  <%= @order.delivered %>
+</p>
+
+<%= link_to 'Edit', edit_order_path(@order) %> |
+<%= link_to 'Back', orders_path %>
