@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Order:</strong>
+  <%= @roll.order_id %>
+</p>
+
+<p>
+  <strong>Machine number:</strong>
+  <%= @roll.machine_number %>
+</p>
+
+<p>
+  <strong>Roll weight:</strong>
+  <%= @roll.roll_weight %>
+</p>
+
+<p>
+  <strong>Ink complete:</strong>
+  <%= @roll.ink_complete %>
+</p>
+
+<p>
+  <strong>Gusset complete:</strong>
+  <%= @roll.gusset_complete %>
+</p>
+
+<p>
+  <strong>Cut complete:</strong>
+  <%= @roll.cut_complete %>
+</p>
+
+<%= link_to 'Edit', edit_roll_path(@roll) %> |
+<%= link_to 'Back', rolls_path %>
