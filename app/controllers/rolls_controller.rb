@@ -10,6 +10,7 @@ class RollsController < ApplicationController
   # GET /rolls/1
   # GET /rolls/1.json
   def show
+    @roll = Roll.find(params[:id])
   end
 
   # GET /rolls/new
