@@ -16,7 +16,6 @@ ActiveRecord::Schema.define(version: 2020_09_22_121121) do
   enable_extension "plpgsql"
 
   create_table "orders", force: :cascade do |t|
-    t.datetime "order_date"
     t.string "customer_name"
     t.string "material"
     t.decimal "filler"

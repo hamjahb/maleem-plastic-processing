@@ -26,4 +26,7 @@ Things you may want to cover:
 * ...
 
 
-rails g scaffold Order order_date:timestamp customer_name:string material:string filler:decimal specifications:string order_weight(KG):integer total_printed(KG):integer total_boxes:integer gusset:boolean delivered:boolean
+rails g scaffold Order order_date:timestamp customer_name:string material:string filler:decimal specifications:string order_weight_KG:integer total_printed_KG:integer total_boxes:integer gusset:boolean delivered:boolean
+
+
+rails g scaffold Roll order:references machine_number:integer roll_weight:integer ink_complete:boolean gusset_complete:boolean cut_complete:boolean

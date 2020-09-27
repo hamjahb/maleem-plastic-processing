@@ -1,15 +1,13 @@
 class Roll < ApplicationRecord
   belongs_to :order
 
-  after_create :update_order_printed
+  after_commit :update_order_printed
 
+
+
+  private
   def update_order_printed
-
-    # old_weight = 200
-    # new_roll_weight = 500
-    # self.new_weight = 
-    # puts "after create workingu!!!!!!!!!!!!!!!!!!!!!!!1"
-    # order.update_attribute(:total_printed_KG, new_weight)
-    
+    sum_of_order_rolls = Roll.where(order_id: order_id).sum(:roll_weight)
+    order.update(total_printed_KG: sum_of_order_rolls)
   end
 end
