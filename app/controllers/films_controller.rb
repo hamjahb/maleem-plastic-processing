@@ -1,5 +1,5 @@
 class FilmsController < ApplicationController
   def index
-    @orders = Order.where("total_printed_KG < order_weight_KG")
+    @orders = Order.where("total_printed_kg < order_weight_kg")
   end
 end
