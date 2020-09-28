@@ -19,11 +19,10 @@ class OrdersTest < ApplicationSystemTestCase
     fill_in "Filler", with: @order.filler
     check "Gusset" if @order.gusset
     fill_in "Material", with: @order.material
-    fill_in "Order date", with: @order.order_date
-    fill_in "Order weight kg", with: @order.order_weight_KG
+    fill_in "Order weight kg", with: @order.order_weight_kg
     fill_in "Specifications", with: @order.specifications
     fill_in "Total boxes", with: @order.total_boxes
-    fill_in "Total printed kg", with: @order.total_printed_KG
+    fill_in "Total printed kg", with: @order.total_printed_kg
     click_on "Create Order"
 
     assert_text "Order was successfully created"
@@ -39,11 +38,10 @@ class OrdersTest < ApplicationSystemTestCase
     fill_in "Filler", with: @order.filler
     check "Gusset" if @order.gusset
     fill_in "Material", with: @order.material
-    fill_in "Order date", with: @order.order_date
-    fill_in "Order weight kg", with: @order.order_weight_KG
+    fill_in "Order weight kg", with: @order.order_weight_kg
     fill_in "Specifications", with: @order.specifications
     fill_in "Total boxes", with: @order.total_boxes
-    fill_in "Total printed kg", with: @order.total_printed_KG
+    fill_in "Total printed kg", with: @order.total_printed_kg
     click_on "Update Order"
 
     assert_text "Order was successfully updated"

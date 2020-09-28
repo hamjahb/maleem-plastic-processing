@@ -1,2 +1,40 @@
 <h1>Films#index</h1>
-<p>Find me in app/views/films/index.html.erb</p>
+<p>this will be the index view for the people making the film </p>
+<ul>
+    <li>will show current status of orders BELOW ORDER WEIGHT</li>
+    <li>Each order will be a button leading to new roll form for that order</li>
+</ul>
+
+
+<h1>Active Orders</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Order date</th>
+      <th>Customer</th>
+      <th>Material</th>
+      <th>Filler</th>
+      <th>Specifications</th>
+      <th>Order weight kg</th>
+      <th>Total printed kg</th>
+      <th colspan="1"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @orders.each do |order| %>
+      <tr>
+        <td><%= order.created_at %></td>
+        <td><%= order.customer_name %></td>
+        <td><%= order.material %></td>
+        <td><%= order.filler %></td>
+        <td><%= order.specifications %></td>
+        <td><%= order.order_weight_kg %></td>
+        <td><%= order.total_printed_kg %></td>
+
+        <td><%= link_to 'Show', order %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

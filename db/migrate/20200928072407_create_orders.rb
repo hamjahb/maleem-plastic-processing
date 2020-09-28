@@ -5,8 +5,8 @@ class CreateOrders < ActiveRecord::Migration[6.0]
       t.string :material
       t.decimal :filler
       t.string :specifications
-      t.integer :order_weight_KG
-      t.integer :total_printed_KG
+      t.integer :order_weight_kg
+      t.integer :total_printed_kg
       t.integer :total_boxes
       t.boolean :gusset
       t.boolean :delivered
