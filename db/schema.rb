@@ -10,16 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_09_28_072425) do
+ActiveRecord::Schema.define(version: 2020_10_01_080631) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "orders", force: :cascade do |t|
     t.string "customer_name"
+    t.integer "film_width"
     t.string "material"
     t.decimal "filler"
     t.string "specifications"
+    t.string "size"
     t.integer "order_weight_kg"
     t.integer "total_printed_kg"
     t.integer "total_boxes"
@@ -36,6 +38,7 @@ ActiveRecord::Schema.define(version: 2020_09_28_072425) do
     t.boolean "ink_complete"
     t.boolean "gusset_complete"
     t.boolean "cut_complete"
+    t.string "operator_name"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["order_id"], name: "index_rolls_on_order_id"

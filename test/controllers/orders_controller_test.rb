@@ -17,7 +17,7 @@ class OrdersControllerTest < ActionDispatch::IntegrationTest
 
   test "should create order" do
     assert_difference('Order.count') do
-      post orders_url, params: { order: { customer_name: @order.customer_name, delivered: @order.delivered, filler: @order.filler, gusset: @order.gusset, material: @order.material, order_weight_kg: @order.order_weight_kg, specifications: @order.specifications, total_boxes: @order.total_boxes, total_printed_kg: @order.total_printed_kg } }
+      post orders_url, params: { order: { customer_name: @order.customer_name, delivered: @order.delivered, filler: @order.filler, film_width: @order.film_width, gusset: @order.gusset, material: @order.material, order_weight_kg: @order.order_weight_kg, size: @order.size, specifications: @order.specifications, total_boxes: @order.total_boxes, total_printed_kg: @order.total_printed_kg } }
     end
 
     assert_redirected_to order_url(Order.last)
@@ -34,7 +34,7 @@ class OrdersControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update order" do
-    patch order_url(@order), params: { order: { customer_name: @order.customer_name, delivered: @order.delivered, filler: @order.filler, gusset: @order.gusset, material: @order.material, order_weight_kg: @order.order_weight_kg, specifications: @order.specifications, total_boxes: @order.total_boxes, total_printed_kg: @order.total_printed_kg } }
+    patch order_url(@order), params: { order: { customer_name: @order.customer_name, delivered: @order.delivered, filler: @order.filler, film_width: @order.film_width, gusset: @order.gusset, material: @order.material, order_weight_kg: @order.order_weight_kg, size: @order.size, specifications: @order.specifications, total_boxes: @order.total_boxes, total_printed_kg: @order.total_printed_kg } }
     assert_redirected_to order_url(@order)
   end
 

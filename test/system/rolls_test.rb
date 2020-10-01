@@ -18,6 +18,7 @@ class RollsTest < ApplicationSystemTestCase
     check "Gusset complete" if @roll.gusset_complete
     check "Ink complete" if @roll.ink_complete
     fill_in "Machine number", with: @roll.machine_number
+    fill_in "Operator name", with: @roll.operator_name
     fill_in "Order", with: @roll.order_id
     fill_in "Roll weight", with: @roll.roll_weight
     click_on "Create Roll"
@@ -34,6 +35,7 @@ class RollsTest < ApplicationSystemTestCase
     check "Gusset complete" if @roll.gusset_complete
     check "Ink complete" if @roll.ink_complete
     fill_in "Machine number", with: @roll.machine_number
+    fill_in "Operator name", with: @roll.operator_name
     fill_in "Order", with: @roll.order_id
     fill_in "Roll weight", with: @roll.roll_weight
     click_on "Update Roll"

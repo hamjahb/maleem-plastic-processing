@@ -7,6 +7,7 @@ class CreateRolls < ActiveRecord::Migration[6.0]
       t.boolean :ink_complete
       t.boolean :gusset_complete
       t.boolean :cut_complete
+      t.string :operator_name
 
       t.timestamps
     end

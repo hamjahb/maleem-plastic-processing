@@ -17,7 +17,7 @@ class RollsControllerTest < ActionDispatch::IntegrationTest
 
   test "should create roll" do
     assert_difference('Roll.count') do
-      post rolls_url, params: { roll: { cut_complete: @roll.cut_complete, gusset_complete: @roll.gusset_complete, ink_complete: @roll.ink_complete, machine_number: @roll.machine_number, order_id: @roll.order_id, roll_weight: @roll.roll_weight } }
+      post rolls_url, params: { roll: { cut_complete: @roll.cut_complete, gusset_complete: @roll.gusset_complete, ink_complete: @roll.ink_complete, machine_number: @roll.machine_number, operator_name: @roll.operator_name, order_id: @roll.order_id, roll_weight: @roll.roll_weight } }
     end
 
     assert_redirected_to roll_url(Roll.last)
@@ -34,7 +34,7 @@ class RollsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update roll" do
-    patch roll_url(@roll), params: { roll: { cut_complete: @roll.cut_complete, gusset_complete: @roll.gusset_complete, ink_complete: @roll.ink_complete, machine_number: @roll.machine_number, order_id: @roll.order_id, roll_weight: @roll.roll_weight } }
+    patch roll_url(@roll), params: { roll: { cut_complete: @roll.cut_complete, gusset_complete: @roll.gusset_complete, ink_complete: @roll.ink_complete, machine_number: @roll.machine_number, operator_name: @roll.operator_name, order_id: @roll.order_id, roll_weight: @roll.roll_weight } }
     assert_redirected_to roll_url(@roll)
   end
 

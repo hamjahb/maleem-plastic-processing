@@ -1,6 +1,6 @@
 class Roll < ApplicationRecord
   belongs_to :order
-
+  
   after_commit :update_order_printed
 
 

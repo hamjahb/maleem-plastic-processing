@@ -1,6 +1,13 @@
 Rails.application.routes.draw do
-  resources :rolls
-  resources :orders
+  # resources :orders
+  # resources :rolls
+
+  resources :orders do 
+    resources :rolls, only: [:index, :new, :create]
+  end
+
+  resources :rolls, only: [:index, :show, :edit, :update, :destroy]
+
   get 'welcome/index'
   get 'films', to: 'films#index'
 

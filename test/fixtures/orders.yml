@@ -2,9 +2,11 @@
 
 one:
   customer_name: MyString
+  film_width: 1
   material: MyString
   filler: 9.99
   specifications: MyString
+  size: MyString
   order_weight_kg: 1
   total_printed_kg: 1
   total_boxes: 1
@@ -13,9 +15,11 @@ one:
 
 two:
   customer_name: MyString
+  film_width: 1
   material: MyString
   filler: 9.99
   specifications: MyString
+  size: MyString
   order_weight_kg: 1
   total_printed_kg: 1
   total_boxes: 1

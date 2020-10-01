@@ -26,7 +26,7 @@ Things you may want to cover:
 * ...
 
 
-rails g scaffold Order customer_name:string material:string filler:decimal specifications:string order_weight_kg:integer total_printed_kg:integer total_boxes:integer gusset:boolean delivered:boolean
+rails g scaffold Order customer_name:string film_width:integer material:string filler:decimal specifications:string size:string order_weight_kg:integer total_printed_kg:integer total_boxes:integer gusset:boolean delivered:boolean
 
 
-rails g scaffold Roll order:references machine_number:integer roll_weight:integer ink_complete:boolean gusset_complete:boolean cut_complete:boolean
+rails g scaffold Roll order:references machine_number:integer roll_weight:integer ink_complete:boolean gusset_complete:boolean cut_complete:boolean operator_name:string 

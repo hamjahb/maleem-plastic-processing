@@ -17,9 +17,11 @@ class OrdersTest < ApplicationSystemTestCase
     fill_in "Customer name", with: @order.customer_name
     check "Delivered" if @order.delivered
     fill_in "Filler", with: @order.filler
+    fill_in "Film width", with: @order.film_width
     check "Gusset" if @order.gusset
     fill_in "Material", with: @order.material
     fill_in "Order weight kg", with: @order.order_weight_kg
+    fill_in "Size", with: @order.size
     fill_in "Specifications", with: @order.specifications
     fill_in "Total boxes", with: @order.total_boxes
     fill_in "Total printed kg", with: @order.total_printed_kg
@@ -36,9 +38,11 @@ class OrdersTest < ApplicationSystemTestCase
     fill_in "Customer name", with: @order.customer_name
     check "Delivered" if @order.delivered
     fill_in "Filler", with: @order.filler
+    fill_in "Film width", with: @order.film_width
     check "Gusset" if @order.gusset
     fill_in "Material", with: @order.material
     fill_in "Order weight kg", with: @order.order_weight_kg
+    fill_in "Size", with: @order.size
     fill_in "Specifications", with: @order.specifications
     fill_in "Total boxes", with: @order.total_boxes
     fill_in "Total printed kg", with: @order.total_printed_kg

@@ -1,4 +1,4 @@
-<%= form_with(model: roll, local: true) do |form| %>
+<%= form_with(model: [@order, @roll], url: order_rolls_path, local: true) do |form| %>
   <% if roll.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(roll.errors.count, "error") %> prohibited this roll from being saved:</h2>
@@ -11,10 +11,16 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <%
+=begin%>
+ <div class="field">
     <%= form.label :order_id %>
     <%= form.text_field :order_id %>
-  </div>
+  </div> 
+<%
+=end%>
+
+<%= hidden_field_tag :order_id, params[:order_id] %>
 
   <div class="field">
     <%= form.label :machine_number %>
@@ -26,7 +32,15 @@
     <%= form.number_field :roll_weight %>
   </div>
 
+
   <div class="field">
+    <%= form.label :operator_name %>
+    <%= form.text_field :operator_name %>
+  </div>
+
+  <%
+=begin%>
+ <div class="field">
     <%= form.label :ink_complete %>
     <%= form.check_box :ink_complete %>
   </div>
@@ -39,7 +53,9 @@
   <div class="field">
     <%= form.label :cut_complete %>
     <%= form.check_box :cut_complete %>
-  </div>
+  </div> 
+<%
+=end%>
 
   <div class="actions">
     <%= form.submit %>

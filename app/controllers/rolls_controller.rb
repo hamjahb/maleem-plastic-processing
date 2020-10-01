@@ -1,5 +1,6 @@
 class RollsController < ApplicationController
   before_action :set_roll, only: [:show, :edit, :update, :destroy]
+  before_action :get_order_id, only: [:new, :create]
 
   # GET /rolls
   # GET /rolls.json
@@ -10,7 +11,6 @@ class RollsController < ApplicationController
   # GET /rolls/1
   # GET /rolls/1.json
   def show
-    @roll = Roll.find(params[:id])
   end
 
   # GET /rolls/new
@@ -25,7 +25,8 @@ class RollsController < ApplicationController
   # POST /rolls
   # POST /rolls.json
   def create
-    @roll = Roll.new(roll_params)
+    @order = Order.find(params[:order_id])
+    @roll = @order.rolls.new(roll_params)
 
     respond_to do |format|
       if @roll.save
@@ -70,6 +71,11 @@ class RollsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def roll_params
-      params.require(:roll).permit(:order_id, :machine_number, :roll_weight, :ink_complete, :gusset_complete, :cut_complete)
+      params.require(:roll).permit(:order_id, :machine_number, :roll_weight, :ink_complete, :gusset_complete, :cut_complete, :operator_name)
+    end
+
+    # Used to get order ID for roll
+    def get_order_id
+      @Order = Order.find(params[:order_id])
     end
 end
