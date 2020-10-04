@@ -13,9 +13,9 @@ class RollsController < ApplicationController
   def show
   end
 
-  # GET /rolls/new
+  # GET /order/:order_id/rolls/:id
+  # method to change method path for edit and new
   def new
-    # @roll = Roll.new
     @order = Order.find(params[:order_id])
     @roll = @order.rolls.new
     @path = [@order, @roll]
@@ -28,7 +28,7 @@ class RollsController < ApplicationController
     @path = @roll
   end
 
-  # POST /rolls
+  # POST /order/:order_id/rolls/:id
   # POST /rolls.json
   def create
     @order = Order.find(params[:order_id])
