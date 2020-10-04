@@ -15,11 +15,17 @@ class RollsController < ApplicationController
 
   # GET /rolls/new
   def new
-    @roll = Roll.new
+    # @roll = Roll.new
+    @order = Order.find(params[:order_id])
+    @roll = @order.rolls.new
+    @path = [@order, @roll]
   end
 
   # GET /rolls/1/edit
   def edit
+    @roll = Roll.find(params[:id])
+    @order = @roll.order_id
+    @path = @roll
   end
 
   # POST /rolls
