@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_10_01_080631) do
+ActiveRecord::Schema.define(version: 2020_10_04_110021) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -19,11 +19,11 @@ ActiveRecord::Schema.define(version: 2020_10_01_080631) do
     t.string "customer_name"
     t.integer "film_width"
     t.string "material"
-    t.decimal "filler"
+    t.decimal "filler", default: "0.0"
     t.string "specifications"
     t.string "size"
-    t.integer "order_weight_kg"
-    t.integer "total_printed_kg"
+    t.integer "order_weight_kg", null: false
+    t.integer "total_printed_kg", default: 0
     t.integer "total_boxes"
     t.boolean "gusset"
     t.boolean "delivered"
@@ -33,12 +33,12 @@ ActiveRecord::Schema.define(version: 2020_10_01_080631) do
 
   create_table "rolls", force: :cascade do |t|
     t.bigint "order_id", null: false
-    t.integer "machine_number"
-    t.integer "roll_weight"
+    t.integer "machine_number", null: false
+    t.integer "roll_weight", null: false
     t.boolean "ink_complete"
     t.boolean "gusset_complete"
     t.boolean "cut_complete"
-    t.string "operator_name"
+    t.string "operator_name", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["order_id"], name: "index_rolls_on_order_id"
