@@ -7,11 +7,11 @@
     <tr>
       <th>Order date</th>
       <th>Customer name</th>
+      <th>Size</th>
       <th>Film Width In CM</th>
       <th>Material</th>
       <th>Filler</th>
       <th>Specifications</th>
-      <th>Size</th>
       <th>Order weight kg</th>
       <th>Total printed kg</th>
       <th>Total boxes</th>
@@ -26,11 +26,11 @@
       <tr>
       <td><%= order.created_at %></td>
         <td><%= order.customer_name %></td>
+        <td><%= order.size %></td>
         <td><%= order.film_width %></td>
         <td><%= order.material %></td>
         <td><%= order.filler %></td>
         <td><%= order.specifications %></td>
-        <td><%= order.size %></td>
         <td><%= order.order_weight_kg %></td>
         <td><%= order.total_printed_kg %></td>
         <td><%= order.total_boxes %></td>
