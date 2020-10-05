@@ -8,9 +8,9 @@
       <th>Material</th>
       <th>Film Width</th>
       <th>Filler</th>
-      <th>Specifications</th>
-      <th>Order weight</th>
-      <th>Total printed</th>
+      <th>Thickness</th>
+      <th>Order weight kg</th>
+      <th>Total printed kg</th>
       <th colspan="2"></th>
     </tr>
   </thead>
@@ -24,10 +24,12 @@
         <td><%= order.film_width %> CM</td>
         <td><%= order.filler %> %</td>
         <td><%= order.specifications %></td>
+        <td><%= order.thickness %> Micron</td>
         <td><%= order.order_weight_kg %> KG</td>
         <td><%= order.total_printed_kg %> KG</td>
         <td><button class="btn btn-outline-success"><%= link_to 'New Roll', new_order_roll_path(order_id: order.id) %> </button></td>
         <td><button class="btn btn-outline-info"><%= link_to 'Order Details', order %></td>
+        
       </tr>
     <% end %>
   </tbody>
