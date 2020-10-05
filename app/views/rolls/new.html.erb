@@ -1,5 +1,9 @@
-<h1>New Roll</h1>
+<h1 class="text-center">New Roll</h1>
 
 <%= render 'form', roll: @roll %>
 
-<%= link_to 'Back', films_path %>
+<div class="text-center">
+    <button class="btn btn-warning">
+        <%= link_to 'Back', films_path %>
+    </button>
+</div>
