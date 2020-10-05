@@ -22,8 +22,8 @@
   </div>
 
   <div class="field">
-    <%= form.label :film_width, "Film Width In CM" %>
-    <%= form.number_field :film_width %>
+    <%= form.label :film_width, "Film Width" %>
+    <%= form.number_field :film_width %> CM
   </div>
 
   <div class="field">
@@ -33,7 +33,12 @@
 
   <div class="field">
     <%= form.label :filler %>
-    <%= form.text_field :filler %>
+    <%= form.text_field :filler %> %
+  </div>
+
+  <div class="field">
+    <%= form.label :thickness %>
+    <%= form.text_field :thickness %> Micron
   </div>
 
   <div class="field">
@@ -44,12 +49,12 @@
 
   <div class="field">
     <%= form.label :order_weight_kg %>
-    <%= form.number_field :order_weight_kg %>
+    <%= form.number_field :order_weight_kg %> KG
   </div>
 
   <div class="field">
     <%= form.label :total_printed_kg %>
-    <%= form.number_field :total_printed_kg %>
+    <%= form.number_field :total_printed_kg %> KG
   </div>
 
   <div class="field">
