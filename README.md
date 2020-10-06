@@ -34,4 +34,4 @@ rails g scaffold Roll order:references machine_number:integer roll_weight:intege
 
 
 * Known Bugs
-- after commit destroy bug during call back
+- after commit destroy order bug during call back
