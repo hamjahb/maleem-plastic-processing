@@ -1,6 +1,8 @@
-<h1>Editing Roll</h1>
+<body class="text-center">
+    <h1>Editing Roll <%= @roll.id %></h1>
 
-<%= render 'form', roll: @roll %>
-
-<%= link_to 'Show', @roll %> |
-<%= link_to 'Back', rolls_path %>
+    <%= render 'form', roll: @roll %>
+     <button type="button" class="btn btn-success btn-lg">
+     <%= link_to 'back', @roll %>
+  </button>
+</body>
