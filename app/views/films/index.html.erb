@@ -26,8 +26,18 @@
         <td><%= order.thickness %> Micron</td>
         <td><%= order.order_weight_kg %> KG</td>
         <td><%= order.total_printed_kg %> KG</td>
-        <td><button class="btn btn-outline-success"><%= link_to 'New Roll', new_order_roll_path(order_id: order.id) %> </button></td>
-        <td><button class="btn btn-outline-info"><%= link_to 'Order Details', order %></td>
+
+        <td> 
+          <%= link_to new_order_roll_path(order_id: order.id) do %>
+            <button class="btn btn-outline-success">New Roll</button>
+          <% end %>
+        </td>
+
+        <td> 
+          <%= link_to order do %>
+            <button class="btn btn-outline-info">Order Details</button>
+          <% end %>
+        </td>
         
       </tr>
     <% end %>
