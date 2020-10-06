@@ -1,6 +1,18 @@
-<h1>Editing Order</h1>
+<body>
 
-<%= render 'form', order: @order %>
+    <h1>Editing Order</h1>
 
-<%= link_to 'Show', @order %> |
-<%= link_to 'Back', orders_path %>
+    <%= render 'form', order: @order %>
+
+
+    <%= link_to @order do %>
+        <button class="btn btn-outline-info btn-lg">Order Details</button>
+    <% end %>
+
+    |
+
+    <%= link_to orders_path do %>
+        <button class="btn btn-outline-success btn-lg">Return to Orders</button>
+    <% end %>
+
+</body>

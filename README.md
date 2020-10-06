@@ -30,3 +30,8 @@ rails g scaffold Order customer_name:string film_width:integer material:string f
 
 
 rails g scaffold Roll order:references machine_number:integer roll_weight:integer ink_complete:boolean gusset_complete:boolean cut_complete:boolean operator_name:string 
+
+
+
+* Known Bugs
+- after commit destroy bug during call back
