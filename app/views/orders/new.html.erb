@@ -1,5 +1,14 @@
-<h1>New Order</h1>
+<body class="text-center">
+    <h1>New Order</h1>
 
-<%= render 'form', order: @order %>
+    <%= render 'form', order: @order %>
 
-<%= link_to 'Back', orders_path %>
+
+
+    <%= link_to orders_path do %>
+        <button class="btn btn-warning btn-lg">Back</button>
+    <% end %>
+
+
+
+</body>
