@@ -2,7 +2,8 @@
     <h1>Editing Roll <%= @roll.id %></h1>
 
     <%= render 'form', roll: @roll %>
-     <button type="button" class="btn btn-success btn-lg">
-     <%= link_to 'back', @roll %>
-  </button>
+    
+    <%= link_to @roll do %>
+      <button class="btn btn-success btn-lg">Back</button>
+    <% end %>
 </body>
