@@ -1,64 +1,77 @@
-<p id="notice"><%= notice %></p>
+<body class="text-center ">
 
-<p>
-  <strong>Customer name:</strong>
-  <%= @order.customer_name %>
-</p>
+  <p id="notice"><%= notice %></p class="container-fluid p-3 my-2 border">
 
-<p>
-  <strong>Film Width In CM:</strong>
-  <%= @order.film_width %>
-</p>
+  <h1 class="container-fluid p-3 my-2 border">Order Id: <%= @order.id %><h1>
 
-<p>
-  <strong>Material:</strong>
-  <%= @order.material %>
-</p>
+  <p class="container-fluid p-3 my-2 border">
+    <strong>Customer name:</strong>
+    <%= @order.customer_name %>
+  </p class="container-fluid p-3 my-2 border">
 
-<p>
-  <strong>Filler:</strong>
-  <%= @order.filler %>
-</p>
+  <p class="container-fluid p-3 my-2 border">
+    <strong>Film Width In CM:</strong>
+    <%= @order.film_width %>
+  </p class="container-fluid p-3 my-2 border">
 
-<p>
-  <strong>Thickness:</strong>
-  <%= @order.filler %> Micron
-</p>
+  <p class="container-fluid p-3 my-2 border">
+    <strong>Material:</strong>
+    <%= @order.material %>
+  </p class="container-fluid p-3 my-2 border">
 
-<p>
-  <strong>Specifications:</strong>
-  <%= @order.specifications %>
-</p>
+  <p class="container-fluid p-3 my-2 border">
+    <strong>Filler:</strong>
+    <%= @order.filler %>
+  </p class="container-fluid p-3 my-2 border">
 
-<p>
-  <strong>Size:</strong>
-  <%= @order.size %>
-</p>
+  <p class="container-fluid p-3 my-2 border">
+    <strong>Thickness:</strong>
+    <%= @order.filler %> Micron
+  </p class="container-fluid p-3 my-2 border">
 
-<p>
-  <strong>Order weight kg:</strong>
-  <%= @order.order_weight_kg %>
-</p>
+  <p class="container-fluid p-3 my-2 border">
+    <strong>Specifications:</strong>
+    <%= @order.specifications %>
+  </p class="container-fluid p-3 my-2 border">
 
-<p>
-  <strong>Total printed kg:</strong>
-  <%= @order.total_printed_kg %>
-</p>
+  <p class="container-fluid p-3 my-2 border">
+    <strong>Size:</strong>
+    <%= @order.size %>
+  </p class="container-fluid p-3 my-2 border">
 
-<p>
-  <strong>Total boxes:</strong>
-  <%= @order.total_boxes %>
-</p>
+  <p class="container-fluid p-3 my-2 border">
+    <strong>Order weight kg:</strong>
+    <%= @order.order_weight_kg %>
+  </p class="container-fluid p-3 my-2 border">
 
-<p>
-  <strong>Gusset:</strong>
-  <%= @order.gusset %>
-</p>
+  <p class="container-fluid p-3 my-2 border">
+    <strong>Total printed kg:</strong>
+    <%= @order.total_printed_kg %>
+  </p class="container-fluid p-3 my-2 border">
 
-<p>
-  <strong>Delivered:</strong>
-  <%= @order.delivered %>
-</p>
+  <p class="container-fluid p-3 my-2 border">
+    <strong>Total boxes:</strong>
+    <%= @order.total_boxes %>
+  </p class="container-fluid p-3 my-2 border">
 
-<%= link_to 'Edit', edit_order_path(@order) %> |
-<%= link_to 'Back', films_path %>
+  <p class="container-fluid p-3 my-2 border">
+    <strong>Gusset:</strong>
+    <%= @order.gusset %>
+  </p class="container-fluid p-3 my-2 border">
+
+  <p class="container-fluid p-3 my-2 border">
+    <strong>Delivered:</strong>
+    <%= @order.delivered %>
+  </p class="container-fluid p-3 my-2 border">
+
+  <%= link_to edit_order_path(@order) do %>
+        <button class="btn btn-warning btn-lg" disabled>Edit</button>
+      <% end %> 
+
+      |
+
+  <%= link_to films_path do %>
+        <button class="btn btn-success btn-lg">Back</button>
+      <% end %> 
+
+</body>
