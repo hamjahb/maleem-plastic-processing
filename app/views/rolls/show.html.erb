@@ -1,45 +1,51 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Roll ID:</strong>
-  <%= @roll.id %>
-</p>
+<body class="text-center">
+  <H1>
+    <strong>Roll ID:</strong>
+    <%= @roll.id %>
+  </H1>
 
 
-<p>
-  <strong>Order:</strong>
-  <%= @roll.order_id %>
-</p>
+  <div class="container-fluid p-3 my-2 border">
+    <strong>Order:</strong>
+    <%= @roll.order_id %>
+  </div>
+  <div class="container-fluid p-3 my-2 border">
+    <strong>Machine number:</strong>
+    <%= @roll.machine_number %>
+  </div>
 
-<p>
-  <strong>Machine number:</strong>
-  <%= @roll.machine_number %>
-</p>
+  <div class="container-fluid p-3 my-1 border">
+    <strong>Roll weight:</strong>
+    <%= @roll.roll_weight %>
+  </div>
 
-<p>
-  <strong>Roll weight:</strong>
-  <%= @roll.roll_weight %>
-</p>
+  <div class="container-fluid p-3 my-2 border">
+    <strong>Ink complete:</strong>
+    <%= @roll.ink_complete %>
+  </div>
 
-<p>
-  <strong>Ink complete:</strong>
-  <%= @roll.ink_complete %>
-</p>
+  <div class="container-fluid p-3 my-2 border">
+    <strong>Gusset complete:</strong>
+    <%= @roll.gusset_complete %>
+  </div>
 
-<p>
-  <strong>Gusset complete:</strong>
-  <%= @roll.gusset_complete %>
-</p>
+  <div class="container-fluid p-3 my-2 border">
+    <strong>Cut complete:</strong>
+    <%= @roll.cut_complete %>
+  </div>
 
-<p>
-  <strong>Cut complete:</strong>
-  <%= @roll.cut_complete %>
-</p>
+  <div class="container-fluid p-3 my-2 border">
+    <strong>Operator name:</strong>
+    <%= @roll.operator_name %>
+  </div>
 
-<p>
-  <strong>Operator name:</strong>
-  <%= @roll.operator_name %>
-</p>
+  <button type="button" class="btn btn-warning btn-lg">
+    <%= link_to 'Edit', edit_roll_path(@roll) %> 
+  </button> |
 
-<%= link_to 'Edit', edit_roll_path(@roll) %> |
-<%= link_to 'Back', films_path %>
+  <button type="button" class="btn btn-success btn-lg">
+    <%= link_to 'Done', films_path %>
+  </button>
+</body>
