@@ -11,6 +11,7 @@
     <strong>Order:</strong>
     <%= @roll.order_id %>
   </div>
+  
   <div class="container-fluid p-3 my-2 border">
     <strong>Machine number:</strong>
     <%= @roll.machine_number %>
@@ -41,11 +42,13 @@
     <%= @roll.operator_name %>
   </div>
 
-  <button type="button" class="btn btn-warning btn-lg">
-    <%= link_to 'Edit', edit_roll_path(@roll) %> 
-  </button> |
-
-  <button type="button" class="btn btn-success btn-lg">
-    <%= link_to 'Done', films_path %>
-  </button>
+  <%= link_to edit_roll_path(@roll) do %>
+      <button class="btn btn-warning btn-lg">Edit</button>
+    <% end %>
+    
+    |
+    
+    <%= link_to films_path do %>
+      <button class="btn btn-success btn-lg">Done</button>
+    <% end %>
 </body>
