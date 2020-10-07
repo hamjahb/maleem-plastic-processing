@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_10_05_125416) do
+ActiveRecord::Schema.define(version: 2020_10_07_071532) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -23,7 +23,7 @@ ActiveRecord::Schema.define(version: 2020_10_05_125416) do
     t.string "specifications"
     t.string "size"
     t.integer "order_weight_kg", null: false
-    t.integer "total_printed_kg", default: 0
+    t.integer "total_film_made", default: 0
     t.integer "total_boxes"
     t.boolean "gusset"
     t.boolean "delivered"
