@@ -6,6 +6,7 @@
   <thead>
     <tr>
       <th>Order date</th>
+      <th>Order ID</th>
       <th>Customer name</th>
       <th>Size</th>
       <th>Film Width In CM</th>
@@ -26,7 +27,8 @@
   <tbody>
     <% @orders.each do |order| %>
       <tr>
-      <td><%= order.created_at %></td>
+        <td><%= order.created_at %></td>
+        <td><%= order.id %></td>
         <td><%= order.customer_name %></td>
         <td><%= order.size %></td>
         <td><%= order.film_width %> CM</td>
