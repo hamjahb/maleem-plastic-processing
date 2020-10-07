@@ -33,6 +33,11 @@
     </div>
 
     <div class="field container p-3 my-3 border text-center">
+      <%= form.label :masterbatch, "Masterbatch: " %>
+      <%= form.text_field :masterbatch %>
+    </div>
+
+    <div class="field container p-3 my-3 border text-center">
       <%= form.label :filler, "Filler: "%>
       <%= form.text_field :filler %> %
     </div>
@@ -54,8 +59,8 @@
     </div>
 
     <div class="field container p-3 my-3 border text-center">
-      <%= form.label :total_printed_kg, "Total Film Made: "%>
-      <%= form.number_field :total_printed_kg %> KG
+      <%= form.label :total_film_made, "Total Film Made: "%>
+      <%= form.number_field :total_film_made%> KG
     </div>
 
     <div class="field container p-3 my-3 border text-center">

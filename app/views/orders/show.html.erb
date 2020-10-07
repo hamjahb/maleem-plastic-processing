@@ -1,68 +1,73 @@
 <body class="text-center ">
 
-  <p id="notice"><%= notice %></p class="container-fluid p-3 my-2 border">
+  <p id="notice"><%= notice %> </p>
 
   <h1 class="container-fluid p-3 my-2 border">Order Id: <%= @order.id %><h1>
 
   <p class="container-fluid p-3 my-2 border">
     <strong>Customer name:</strong>
     <%= @order.customer_name %>
-  </p class="container-fluid p-3 my-2 border">
+  </p>
 
   <p class="container-fluid p-3 my-2 border">
     <strong>Film Width In CM:</strong>
     <%= @order.film_width %>
-  </p class="container-fluid p-3 my-2 border">
+  </p>
 
   <p class="container-fluid p-3 my-2 border">
     <strong>Material:</strong>
     <%= @order.material %>
-  </p class="container-fluid p-3 my-2 border">
+  </p>
+
+  <p class="container-fluid p-3 my-2 border">
+    <strong>Masterbatch:</strong>
+    <%= @order.masterbatch %>
+  </p>
 
   <p class="container-fluid p-3 my-2 border">
     <strong>Filler:</strong>
     <%= @order.filler %>
-  </p class="container-fluid p-3 my-2 border">
+  </p>
 
   <p class="container-fluid p-3 my-2 border">
     <strong>Thickness:</strong>
     <%= @order.filler %> Micron
-  </p class="container-fluid p-3 my-2 border">
+  </p>
 
   <p class="container-fluid p-3 my-2 border">
     <strong>Specifications:</strong>
     <%= @order.specifications %>
-  </p class="container-fluid p-3 my-2 border">
+  </p>
 
   <p class="container-fluid p-3 my-2 border">
     <strong>Size:</strong>
     <%= @order.size %>
-  </p class="container-fluid p-3 my-2 border">
+  </p>
 
   <p class="container-fluid p-3 my-2 border">
     <strong>Order weight kg:</strong>
     <%= @order.order_weight_kg %>
-  </p class="container-fluid p-3 my-2 border">
+  </p>
 
   <p class="container-fluid p-3 my-2 border">
     <strong>Total film made:</strong>
     <%= @order.total_film_made %>
-  </p class="container-fluid p-3 my-2 border">
+  </p>
 
   <p class="container-fluid p-3 my-2 border">
     <strong>Total boxes:</strong>
     <%= @order.total_boxes %>
-  </p class="container-fluid p-3 my-2 border">
+  </p>
 
   <p class="container-fluid p-3 my-2 border">
     <strong>Gusset:</strong>
     <%= @order.gusset %>
-  </p class="container-fluid p-3 my-2 border">
+  </p>
 
   <p class="container-fluid p-3 my-2 border">
     <strong>Delivered:</strong>
     <%= @order.delivered %>
-  </p class="container-fluid p-3 my-2 border">
+  </p>
 
   <%= link_to edit_order_path(@order) do %>
         <button class="btn btn-warning btn-lg" disabled>Edit</button>
