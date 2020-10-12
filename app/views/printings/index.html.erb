@@ -1,0 +1,41 @@
+<h1>Printing Orders</h1>
+
+
+<table class="table table-striped  table-hover table-bordered">
+  <thead>
+    <tr class="text-center">
+      <th>Order date</th>
+      <th>Customer</th>
+      <th>Film Width</th>
+      <th>Film Ready for printing</th>
+      <th>Finished Printing</th>
+      <th colspan="2"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @orders.each do |order| %>
+      <tr class="text-center">
+        <td><%= order.created_at %></td>
+        <td><%= order.customer_name %></td>
+        <td><%= order.film_width %> CM</td>
+        <td><%= order.total_film_made %> KG</td>
+        <td><%= order.total_printed_weight %> KG</td>
+
+        <td> 
+          <%= link_to new_order_roll_path(order_id: order.id) do %>
+            <button class="btn btn-outline-success">This will link to show rolls ready to print</button>
+          <% end %>
+        </td>
+
+        <td> 
+          <%= link_to order do %>
+            <button class="btn btn-outline-info">Order Details</button>
+          <% end %>
+        </td>
+        
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
