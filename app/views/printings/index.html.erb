@@ -23,8 +23,8 @@
         <td><%= order.total_printed_weight %> KG</td>
 
         <td> 
-          <%= link_to new_order_roll_path(order_id: order.id) do %>
-            <button class="btn btn-outline-success">This will link to show rolls ready to print</button>
+          <%= link_to printings_show_path(order_id: order.id) do %>
+            <button class="btn btn-outline-success">Print Rolls</button>
           <% end %>
         </td>
 

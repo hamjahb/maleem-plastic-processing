@@ -14,8 +14,8 @@ Rails.application.routes.draw do
   get 'films', to: 'films#index'
 
   get 'printings', to: 'printings#index'
-  get 'printings/show'
-  get 'printings/edit'
+  get 'printings/show', to: 'printings#show'
+  get 'printings/edit', to: 'printings#edit'
   
 
   root 'welcome#index'
