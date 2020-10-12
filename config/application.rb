@@ -7,7 +7,7 @@ require 'rails/all'
 Bundler.require(*Rails.groups)
 
 module PlassticProcessing
-  class Application < Rails::Application
+  class Application < Rails::Applicati1on
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 6.0
     config.time_zone = "Asia/Riyadh"

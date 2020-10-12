@@ -4,6 +4,8 @@ class PrintingsController < ApplicationController
   end
 
   def show
+    @order = Order.find(params[:order_id])
+    @rolls = @order.rolls.where(roll_print_complete: false)
   end
 
   def edit
