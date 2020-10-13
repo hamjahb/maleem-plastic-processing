@@ -15,18 +15,10 @@
     </div>
   <% end %>
 
-  <%
-=begin%>
- <div class="field">
-    <%= form.label :order_id %>
-    <%= form.text_field :order_id %>
-  </div> 
-<%
-=end%>
-
-<%= hidden_field_tag :order_id, params[:order_id] %>
-
-
+	<div class="container p-3 my-3 border text-center">
+    <%= form.label :roll_print_complete %>:
+    <%= form.check_box  :roll_print_complete, {checked: true} %>
+  </div>
 
   <div class="container p-3 my-3 border text-center">
     <%= form.label :printed_weight %>:
@@ -34,24 +26,6 @@
   </div>
 
 
-  <%
-=begin%>
- <div class="field">
-    <%= form.label :roll_print_complete %>
-    <%= form.check_box :roll_print_complete %>
-  </div>
-
-  <div class="field">
-    <%= form.label :gusset_complete %>
-    <%= form.check_box :gusset_complete %>
-  </div>
-
-  <div class="field">
-    <%= form.label :cut_complete %>
-    <%= form.check_box :cut_complete %>
-  </div> 
-<%
-=end%>
 
   <div class="actions text-center">
     <%= form.submit %>

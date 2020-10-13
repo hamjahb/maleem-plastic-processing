@@ -33,7 +33,7 @@ class PrintingsController < ApplicationController
 
   # Only allow a list of trusted parameters through.
   def roll_params
-    params.require(:roll).permit(:printed_weight)
+    params.require(:roll).permit(:printed_weight, :roll_print_complete)
   end
 
 
