@@ -77,7 +77,7 @@ class RollsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def roll_params
-      params.require(:roll).permit(:order_id, :machine_number, :roll_weight, :roll_print_complete, :gusset_complete, :cut_complete, :operator_name)
+      params.require(:roll).permit(:order_id, :machine_number, :roll_weight, :roll_print_complete, :gusset_complete, :cut_complete, :operator_name, :printed_weight)
     end
 
     # Used to get order ID for roll
