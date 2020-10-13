@@ -4,7 +4,7 @@ one:
   order: one
   machine_number: 1
   roll_weight: 1
-  ink_complete: false
+  roll_print_complete: false
   gusset_complete: false
   cut_complete: false
   operator_name: MyString
@@ -13,7 +13,7 @@ two:
   order: two
   machine_number: 1
   roll_weight: 1
-  ink_complete: false
+  roll_print_complete: false
   gusset_complete: false
   cut_complete: false
   operator_name: MyString

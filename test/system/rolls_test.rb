@@ -16,7 +16,7 @@ class RollsTest < ApplicationSystemTestCase
 
     check "Cut complete" if @roll.cut_complete
     check "Gusset complete" if @roll.gusset_complete
-    check "Ink complete" if @roll.ink_complete
+    check "Ink complete" if @roll.roll_print_complete
     fill_in "Machine number", with: @roll.machine_number
     fill_in "Operator name", with: @roll.operator_name
     fill_in "Order", with: @roll.order_id
@@ -33,7 +33,7 @@ class RollsTest < ApplicationSystemTestCase
 
     check "Cut complete" if @roll.cut_complete
     check "Gusset complete" if @roll.gusset_complete
-    check "Ink complete" if @roll.ink_complete
+    check "Ink complete" if @roll.roll_print_complete
     fill_in "Machine number", with: @roll.machine_number
     fill_in "Operator name", with: @roll.operator_name
     fill_in "Order", with: @roll.order_id
