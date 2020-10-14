@@ -31,23 +31,7 @@
             <button class="btn btn-outline-success">Roll Print</button>
           <% end %>
         </td>
-
-        <%
-=begin%>
- <td> 
-          <%= link_to edit_roll_path(roll) do %>
-            <button class="btn btn-outline-warning">Edit Order</button>
-          <% end %>
-        </td>
-
-        <td> 
-          <%= link_to roll, method: :delete, data: { confirm: 'Are you sure?' } do %>
-            <button class="btn btn-outline-danger">Delete Order</button>
-          <% end %>
-        </td> 
-<%
-=end%>
-
+        
       </tr>
     <% end %>
   </tbody>
