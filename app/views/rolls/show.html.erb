@@ -22,11 +22,25 @@
     <%= @roll.roll_weight %> KG
   </div>
 
+
+  <div class="container-fluid p-3 my-2 border">
+    <strong>Operator name:</strong>
+    <%= @roll.operator_name %>
+  </div>
+
+  <br>
+
+  <h3>Printing</h3>
+
   <div class="container-fluid p-3 my-2 border">
     <strong>Printed Weight:</strong>
     <%= @roll.printed_weight %> KG
   </div>
 
+  <br>
+
+  <h3>Cutting</h3>
+  
   <div class="container-fluid p-3 my-2 border">
     <strong>Gusset complete:</strong>
     <%= @roll.gusset_complete %>
@@ -36,13 +50,9 @@
     <strong>Cut complete:</strong>
     <%= @roll.cut_complete %>
   </div>
+  
 
-  <div class="container-fluid p-3 my-2 border">
-    <strong>Operator name:</strong>
-    <%= @roll.operator_name %>
-  </div>
-
-  <%= link_to edit_roll_path(@roll) do %>
+    <%= link_to edit_roll_path(@roll) do %>
       <button class="btn btn-warning btn-lg">Edit</button>
     <% end %>
     
