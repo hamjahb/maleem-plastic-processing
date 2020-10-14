@@ -18,13 +18,13 @@
   </div>
 
   <div class="container-fluid p-3 my-1 border">
-    <strong>Roll weight:</strong>
-    <%= @roll.roll_weight %>
+    <strong>Film weight:</strong>
+    <%= @roll.roll_weight %> KG
   </div>
 
   <div class="container-fluid p-3 my-2 border">
-    <strong>Ink complete:</strong>
-    <%= @roll.roll_print_complete %>
+    <strong>Printed Weight:</strong>
+    <%= @roll.printed_weight %> KG
   </div>
 
   <div class="container-fluid p-3 my-2 border">
@@ -49,6 +49,18 @@
     |
     
     <%= link_to films_path do %>
-      <button class="btn btn-success btn-lg">Done</button>
+      <button class="btn btn-success btn-lg">Films</button>
+    <% end %>
+
+    |
+
+    <%= link_to printings_path do %>
+      <button class="btn btn-success btn-lg">Printing</button>
+    <% end %>
+
+    |
+
+    <%= link_to  do %>
+      <button class="btn btn-success btn-lg">Cutting</button>
     <% end %>
 </body>

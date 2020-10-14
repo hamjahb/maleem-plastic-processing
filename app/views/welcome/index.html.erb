@@ -1,4 +1,23 @@
 <h1>Welcome#index</h1>
+<p id="notice"><%= notice %></p>
 <h1>Hello dis be rails</h1>
 <p>Find me in app/views/welcome/index.html.erb</p>
 <p>there will be buttons that will redirect to the different controller pages except for admin</p>
+
+
+
+    <%= link_to films_path do %>
+      <button class="btn btn-success btn-lg">Films</button>
+    <% end %>
+
+    |
+
+    <%= link_to printings_path do %>
+      <button class="btn btn-success btn-lg">Printing</button>
+    <% end %>
+
+    |
+
+    <%= link_to  do %>
+      <button class="btn btn-success btn-lg">Cutting</button>
+    <% end %>
