@@ -14,7 +14,7 @@
       <th>Roll weight</th>
       <th>Printed<th>
 
-      <th colspan="3"></th>
+      <th colspan="1"></th>
     </tr>
   </thead>
 
@@ -24,7 +24,6 @@
         <td><%= roll.id %></td>
         <td><%= roll.roll_weight %> KG</td>
         <td><%= roll.printed_weight %> KG</td>
-
 
         <td> 
           <%= link_to printings_edit_path(id: roll.id) do %>
@@ -37,4 +36,10 @@
   </tbody>
 </table>
 <br>
+
+<div class="text-center">
+  <%= link_to printings_path do %>
+    <button class="btn btn-outline-success btn-lg ">Back</button>
+  <% end %>
+</div>
 
