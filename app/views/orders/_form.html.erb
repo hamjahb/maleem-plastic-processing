@@ -57,26 +57,38 @@
       <%= form.label :order_weight_kg, "Order Weight: " %>
       <%= form.number_field :order_weight_kg %> KG
     </div>
-
+<%
+=begin%>
+ 
     <div class="field container p-3 my-3 border text-center">
       <%= form.label :total_film_made, "Total Film Made: "%>
       <%= form.number_field :total_film_made%> KG
-    </div>
+    </div> 
+<%
+=end%>
 
-    <div class="field container p-3 my-3 border text-center">
+    <%
+=begin%>
+ <div class="field container p-3 my-3 border text-center">
       <%= form.label :total_boxes, "Total Boxes: " %>
       <%= form.number_field :total_boxes %>
-    </div>
+    </div> 
+<%
+=end%>
 
     <div class="field container p-3 my-3 border text-center">
       <%= form.label :gusset %>
       <%= form.check_box :gusset %>
     </div>
 
-    <div class="field container p-3 my-3 border text-center">
+    <%
+=begin%>
+ <div class="field container p-3 my-3 border text-center">
       <%= form.label :delivered %>
       <%= form.check_box :delivered %>
-    </div>
+    </div> 
+<%
+=end%>
 
     <div class="actions">
       <%= form.submit %>
