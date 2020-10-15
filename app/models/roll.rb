@@ -23,6 +23,9 @@ class Roll < ApplicationRecord
     all_order_rolls = Roll.where(order_id: order_id)
     if all_order_rolls.where('roll_print_complete = ?', false).count == 0
       order.update(print_complete: true)
+
+    else
+      order.update(print_complete: false)
     end
   end
   
