@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
 
+  get 'cuttings/index'
+  get 'cuttings/view'
+  get 'cuttings/edit'
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   # resources :orders
   # resources :rolls
