@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_10_19_112903) do
+ActiveRecord::Schema.define(version: 2020_10_19_113735) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -43,11 +43,12 @@ ActiveRecord::Schema.define(version: 2020_10_19_112903) do
     t.integer "roll_weight", null: false
     t.boolean "roll_print_complete", default: false
     t.boolean "gusset_complete"
-    t.boolean "cut_complete"
+    t.boolean "roll_cut_complete", default: false
     t.string "operator_name", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.integer "printed_weight", default: 0
+    t.integer "number_of_boxes", default: 0
     t.index ["order_id"], name: "index_rolls_on_order_id"
   end
 
