@@ -1,7 +1,7 @@
 class Roll < ApplicationRecord
   belongs_to :order
   
-  after_commit :update_order_film, :update_total_printed, :update_order_done_printing
+  after_commit :update_order_film, :update_total_printed, :update_order_done_printing, :update_order_total_boxes, :update_order_done_cutting
 
 
 
@@ -26,6 +26,23 @@ class Roll < ApplicationRecord
 
     else
       order.update(print_complete: false)
+    end
+  end
+
+  # updates the total boxes for an order when a roll is finished cutting
+  def update_order_total_boxes
+    sum_of_cut_rolls = Roll.where(order_id: order_id).sum(:number_of_boxes)
+    order.update(total_boxes: sum_of_cut_rolls)
+  end
+
+  # if there are no more rolls to be printed in an order complete printing
+  def update_order_done_cutting
+    all_order_rolls = Roll.where(order_id: order_id)
+    if all_order_rolls.where('roll_cut_complete = ?', false).count == 0
+      order.update(cut_complete: true)
+
+    else
+      order.update(cut_complete: false)
     end
   end
   
