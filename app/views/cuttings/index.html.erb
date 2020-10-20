@@ -1,2 +1,41 @@
-<h1>Cuttings#index</h1>
-<p>Find me in app/views/cuttings/index.html.erb</p>
+<h1>Active Cutting Orders</h1>
+
+<table class="table table-striped  table-hover table-bordered">
+  <thead>
+    <tr class="text-center">
+      <th>Order date</th>
+      <th>Customer</th>
+      <th>Order weight</th>
+      <th>Film ready to cut</th>
+      <th>Total Boxes Cut</th>
+      <th>Total Boxed Weight</th>
+      <th colspan="2"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @orders.each do |order| %>
+      <tr class="text-center">
+        <td><%= order.created_at %></td>
+        <td><%= order.customer_name %></td>
+        <td><%= order.order_weight_kg %> KG</td>
+        <td><%= order.total_film_made %> KG</td>
+        <td><%= order.total_boxes %></td>
+        <td><%= order.total_boxed_weight %>KG</td>
+
+        <td> 
+          <%= link_to cuttings_view_path(order_id: order.id) do %>
+            <button class="btn btn-outline-success">Cut Roll</button>
+          <% end %>
+        </td>
+
+        <td> 
+          <%= link_to order do %>
+            <button class="btn btn-outline-info">Order Details</button>
+          <% end %>
+        </td>
+        
+      </tr>
+    <% end %>
+  </tbody>
+</table>
