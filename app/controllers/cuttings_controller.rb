@@ -4,6 +4,8 @@ class CuttingsController < ApplicationController
   end
 
   def view
+    @order = Order.find(params[:order_id])
+    @rolls = @order.rolls.where(roll_cut_complete: false, roll_print_complete: true)
   end
 
   def edit

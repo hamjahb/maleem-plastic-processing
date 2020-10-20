@@ -1,2 +1,44 @@
-<h1>Cuttings#view</h1>
-<p>Find me in app/views/cuttings/view.html.erb</p>
+<h1>Print Order for <%= @order.customer_name%></h1>
+<h4><%= @order.specifications%><h4>
+
+
+
+<p id="notice"><%= notice %></p>
+
+<h3>Rolls Ready for Cutting</h3>
+
+<table class="table table-striped  table-hover table-bordered">
+  <thead>
+    <tr>
+      <th>Roll ID</th>
+      <th>Ready to Cut<th>
+
+      <th colspan="1"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @rolls.each do |roll| %>
+      <tr>
+        <td><%= roll.id %></td>
+        <td><%= roll.printed_weight %> KG</td>
+
+        <td> 
+          <%= link_to cuttings_edit_path(id: roll.id) do %>
+            <button class="btn btn-outline-success">Roll Cut</button>
+          <% end %>
+        </td>
+        
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<br>
+
+<div class="text-center">
+  <%= link_to cuttings_index_path do %>
+    <button class="btn btn-outline-success btn-lg ">Back</button>
+  <% end %>
+</div>
+
+

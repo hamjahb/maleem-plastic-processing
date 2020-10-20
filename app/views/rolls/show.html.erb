@@ -48,7 +48,7 @@
 
   <div class="container-fluid p-3 my-2 border">
     <strong>Cut complete:</strong>
-    <%= @roll.cut_complete %>
+    <%= @roll.roll_cut_complete %>
   </div>
   
 
@@ -70,7 +70,7 @@
 
     |
 
-    <%= link_to  do %>
+    <%= link_to cuttings_index_path do %>
       <button class="btn btn-success btn-lg">Cutting</button>
     <% end %>
 </body>
