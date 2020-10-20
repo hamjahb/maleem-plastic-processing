@@ -9,5 +9,28 @@ class CuttingsController < ApplicationController
   end
 
   def edit
+    @roll = Roll.find(params[:id])
   end
+
+  def update
+    respond_to do |format|
+      @roll = Roll.find(params[:id])
+      if @roll.update(roll_params)
+        format.html { redirect_to cuttings_index_path, notice: 'Roll was successfully updated.' }
+        format.json { render :show, status: :ok, location: @roll }
+      else
+        format.html { render :edit }
+        format.json { render json: @roll.errors, status: :unprocessable_entity }
+      end
+    end
+  end
+
+
+  private
+
+  # Only allow a list of trusted parameters through.
+  def roll_params
+    params.require(:roll).permit(:roll_cut_complete, :number_of_boxes)
+  end
+
 end

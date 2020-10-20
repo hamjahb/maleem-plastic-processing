@@ -1,2 +1,36 @@
 <h1>Cuttings#edit</h1>
 <p>Find me in app/views/cuttings/edit.html.erb</p>
+
+
+<h1>Roll ID: <%= @roll.id%></h1>
+
+
+
+<%= form_with(model: @roll, url:{:controller => 'cuttings', :action => 'update', :id => params[:id]} ,  local: true) do |form| %>
+  <% if @roll.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(roll.errors.count, "error") %> prohibited this roll from being saved:</h2>
+
+      <ul>
+        <% roll.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+	<div class="container p-3 my-3 border text-center">
+    <%= form.label :roll_cut_complete %>:
+    <%= form.check_box  :roll_cut_complete, {checked: true} %>
+  </div>
+
+  <div class="container p-3 my-3 border text-center">
+    <%= form.label :number_of_boxes %>:
+    <%= form.number_field :number_of_boxes %> Boxes
+  </div>
+
+  <div class="actions text-center">
+    <%= form.submit %>
+  </div>
+<% end %>
+

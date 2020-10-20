@@ -20,6 +20,8 @@ Rails.application.routes.draw do
   get 'cuttings/index', to: 'cuttings#index'
   get 'cuttings/view', to: 'cuttings#view'
   get 'cuttings/edit', to: 'cuttings#edit'
+  patch 'cuttings/:id', to: 'cuttings#update'
+  
 
   root 'welcome#index'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
