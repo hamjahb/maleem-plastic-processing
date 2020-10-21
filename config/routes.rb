@@ -16,8 +16,9 @@ Rails.application.routes.draw do
   get 'printings', to: 'printings#index'
   get 'printings/show', to: 'printings#show'
   get 'printings/edit', to: 'printings#edit'
+  patch 'printings/:id', to: 'printings#update'
   
-  get 'cuttings/index', to: 'cuttings#index'
+  get 'cuttings', to: 'cuttings#index'
   get 'cuttings/view', to: 'cuttings#view'
   get 'cuttings/edit', to: 'cuttings#edit'
   patch 'cuttings/:id', to: 'cuttings#update'

@@ -17,6 +17,7 @@ class PrintingsController < ApplicationController
 
   def update
     respond_to do |format|
+      @roll = Roll.find(params[:id])
       if @roll.update(roll_params)
         format.html { redirect_to printings_path, notice: 'Roll was successfully updated.' }
         format.json { render :show, status: :ok, location: @roll }
