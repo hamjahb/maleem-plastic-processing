@@ -16,7 +16,7 @@ class CuttingsController < ApplicationController
     respond_to do |format|
       @roll = Roll.find(params[:id])
       if @roll.update(roll_params)
-        format.html { redirect_to cuttings_index_path, notice: 'Roll was successfully updated.' }
+        format.html { redirect_to cuttings_path, notice: 'Roll was successfully updated.' }
         format.json { render :show, status: :ok, location: @roll }
       else
         format.html { render :edit }
