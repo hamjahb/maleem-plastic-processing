@@ -6,7 +6,8 @@
     <tr class="text-center">
       <th>Order date</th>
       <th>Customer</th>
-      <th>Film Width</th>
+      <th>Size</th>
+      <th>Specifications</th>
       <th>Film Ready for printing</th>
       <th>Finished Printing</th>
       <th colspan="2"></th>
@@ -18,7 +19,8 @@
       <tr class="text-center">
         <td><%= order.created_at %></td>
         <td><%= order.customer_name %></td>
-        <td><%= order.film_width %> CM</td>
+        <td><%= order.size %> </td>
+        <td><%= order.specifications %> </td>
         <td><%= order.total_film_made %> KG</td>
         <td><%= order.total_printed_weight %> KG</td>
 

@@ -30,7 +30,9 @@
 
   <br>
 
-  <h3>Printing</h3>
+  <%
+=begin%>
+ <h3>Printing</h3>
 
   <div class="container-fluid p-3 my-2 border">
     <strong>Printed Weight:</strong>
@@ -54,7 +56,9 @@
   <div class="container-fluid p-3 my-2 border">
     <strong>Number of Boxes:</strong>
     <%= @roll.number_of_boxes %>
-  </div>
+  </div> 
+<%
+=end%>
   
 
   <%= link_to edit_roll_path(@roll) do %>
