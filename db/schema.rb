@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_10_20_075816) do
+ActiveRecord::Schema.define(version: 2020_10_25_083307) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -35,6 +35,8 @@ ActiveRecord::Schema.define(version: 2020_10_20_075816) do
     t.integer "total_printed_weight", default: 0
     t.boolean "cut_complete", default: false
     t.integer "total_boxed_weight", default: 0
+    t.integer "height", default: 0
+    t.integer "unit_weight", default: 0
   end
 
   create_table "rolls", force: :cascade do |t|

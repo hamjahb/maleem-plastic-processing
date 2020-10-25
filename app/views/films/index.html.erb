@@ -1,15 +1,21 @@
-<h1>Active Orders</h1>
+<h1>Active Film Orders</h1>
 
 <table class="table table-striped  table-hover table-bordered">
   <thead>
     <tr class="text-center">
-      <th>Order date</th>
+      <%
+=begin%>
+ <th>Order date</th> 
+<%
+=end%>
       <th>Customer</th>
       <th>Material</th>
       <th>Masterbatch</th>
       <th>Film Width</th>
-      <th>Filler</th>
+      <th>Height</th>
       <th>Thickness</th>
+      <th>Unit Weight</th>
+      <th>Filler</th>
       <th>Order weight</th>
       <th>Total Film Made</th>
       <th colspan="2"></th>
@@ -19,13 +25,19 @@
   <tbody>
     <% @orders.each do |order| %>
       <tr class="text-center">
-        <td><%= order.created_at %></td>
+        <%
+=begin%>
+ <td><%= order.created_at %></td> 
+<%
+=end%>
         <td><%= order.customer_name %></td>
         <td><%= order.material %></td>
         <td><%= order.masterbatch %></td>
         <td><%= order.film_width %> CM</td>
-        <td><%= order.filler %> %</td>
+        <td><%= order.height %> CM</td>
         <td><%= order.thickness %> Micron</td>
+        <td><%= calculate_unit_weight(order.thickness, order.film_width, order.height) %> g</td>
+        <td><%= order.filler %> %</td>
         <td><%= order.order_weight_kg %> KG</td>
         <td><%= order.total_film_made %> KG</td>
 

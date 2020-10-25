@@ -8,8 +8,12 @@
       <th>Order date</th>
       <th>Order ID</th>
       <th>Customer name</th>
+      <th>Specifications</th>
       <th>Size</th>
       <th>Film Width In CM</th>
+      <th>Height In CM</th>
+      <th>pieces in KG </th>
+      <th>Unit Weight</th>
       <th>Material</th>
       <th>Masterbatch</th>
       <th>Filler</th>
@@ -32,8 +36,12 @@
         <td><%= order.created_at %></td>
         <td><%= order.id %></td>
         <td><%= order.customer_name %></td>
+        <td><%= order.specifications %></td>
         <td><%= order.size %></td>
         <td><%= order.film_width %> CM</td>
+        <td><%= order.height %> CM</td>
+        <td><%= calculate_pieces_per_kg(order.thickness, order.film_width, order.height) %> g</td>
+        <td><%= calculate_unit_weight(order.thickness, order.film_width, order.height) %> g</td>
         <td><%= order.material %></td>
         <td><%= order.masterbatch %></td>
         <td><%= order.filler %> %</td>
