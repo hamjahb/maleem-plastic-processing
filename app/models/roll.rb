@@ -31,15 +31,8 @@ class Roll < ApplicationRecord
 
   # updates the total boxes for an order when a roll is finished cutting
   def update_order_total_boxes
-    kg_in_a_single_box = 15
-
     sum_of_cut_rolls = Roll.where(order_id: order_id).sum(:number_of_boxes)
     order.update(total_boxes: sum_of_cut_rolls)
-
-    # updates the total cut weight in KG
-    total_weight_of_total_boxes = sum_of_cut_rolls * kg_in_a_single_box
-    order.update(total_boxed_weight: total_weight_of_total_boxes)
-
   end
 
   # if there are no more rolls to be printed in an order complete printing

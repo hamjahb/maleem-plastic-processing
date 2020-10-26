@@ -25,7 +25,7 @@
         <td><%= order.specifications %></td>
         <td><%= order.order_weight_kg %> KG</td>
         <td><%= order.total_boxes %> Boxes</td>
-        <td><%= order.total_boxed_weight %> KG</td>
+        <td><%= weight_of_cut_boxes(order.total_boxes) %> KG</td>
 
         <td> 
           <%= link_to cuttings_view_path(order_id: order.id) do %>
