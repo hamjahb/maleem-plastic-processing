@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_10_25_140054) do
+ActiveRecord::Schema.define(version: 2020_10_26_115553) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -26,7 +26,7 @@ ActiveRecord::Schema.define(version: 2020_10_25_140054) do
     t.integer "total_film_made", default: 0
     t.integer "total_boxes", default: 0
     t.boolean "gusset"
-    t.boolean "delivered"
+    t.boolean "delivered", default: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.integer "thickness", null: false
