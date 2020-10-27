@@ -5,7 +5,7 @@ class RollsController < ApplicationController
   # GET /rolls
   # GET /rolls.json
   def index
-    @rolls = Roll.all
+    @rolls = Roll.where(roll_cut_complete: false)
   end
 
   # GET /rolls/1
