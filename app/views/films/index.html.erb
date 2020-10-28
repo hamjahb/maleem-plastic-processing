@@ -3,11 +3,6 @@
 <table class="table table-striped  table-hover table-bordered">
   <thead>
     <tr class="text-center">
-      <%
-=begin%>
- <th>Order date</th> 
-<%
-=end%>
       <th>Customer</th>
       <th>Material</th>
       <th>Masterbatch</th>
@@ -25,11 +20,6 @@
   <tbody>
     <% @orders.each do |order| %>
       <tr class="text-center">
-        <%
-=begin%>
- <td><%= order.created_at %></td> 
-<%
-=end%>
         <td><%= order.customer_name %></td>
         <td><%= order.material %></td>
         <td><%= order.masterbatch %></td>

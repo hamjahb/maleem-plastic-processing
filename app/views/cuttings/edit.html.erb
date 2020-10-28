@@ -1,6 +1,4 @@
-<h1>Roll ID: <%= @roll.id%></h1>
-
-
+<h1 class="container p-3 my-3 border text-center">Roll ID: <%= @roll.id%></h1>
 
 <%= form_with(model: @roll, url:{:controller => 'cuttings', :action => 'update', :id => params[:id]} ,  local: true) do |form| %>
   <% if @roll.errors.any? %>
