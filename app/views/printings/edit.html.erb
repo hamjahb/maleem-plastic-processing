@@ -15,10 +15,7 @@
     </div>
   <% end %>
 
-	<div class="container p-3 my-3 border text-center">
-    <%= form.label :roll_print_complete %>:
-    <%= form.check_box  :roll_print_complete, {checked: true} %>
-  </div>
+  <%= form.hidden_field :roll_print_complete, value: true %>
 
   <div class="container p-3 my-3 border text-center">
     <%= form.label :printed_weight %>:
