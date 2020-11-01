@@ -1,7 +1,7 @@
 class PrintingsController < ApplicationController
   
   def index
-    @orders = Order.where(print_complete:  false)
+    @orders = Order.where(print_complete:  false).order(:id)
   end
 
   def show

@@ -4,7 +4,7 @@ class OrdersController < ApplicationController
   # GET /orders
   # GET /orders.json
   def index
-    @orders = Order.where(delivered: false)
+    @orders = Order.where(delivered: false).order(:id)
   end
 
   # GET /orders/1

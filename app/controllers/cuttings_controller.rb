@@ -1,6 +1,6 @@
 class CuttingsController < ApplicationController
   def index
-    @orders = Order.where(cut_complete: false)
+    @orders = Order.where(cut_complete: false).order(:id)
   end
 
   def view
