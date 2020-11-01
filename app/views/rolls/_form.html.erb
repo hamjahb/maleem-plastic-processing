@@ -25,7 +25,8 @@
   <div class="container p-3 my-3 border text-center">
   
     <%= form.label :machine_number %>:
-    M-<%= form.number_field :machine_number %>
+    <%= form.select(:machine_number, options_for_select([['M-1', 1], ['M-2', 2], ['M-3', 3], ['M-4', 4], ['M-5', 5]])) %>
+  
   </div>
 
   <div class="container p-3 my-3 border text-center">
