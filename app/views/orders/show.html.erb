@@ -10,16 +10,6 @@
   </p>
 
   <p class="container-fluid p-3 my-2 border">
-    <strong>Film Width In CM:</strong>
-    <%= @order.film_width %> CM
-  </p>
-
-  <p class="container-fluid p-3 my-2 border">
-    <strong>Height In CM:</strong>
-    <%= @order.height %> CM
-  </p>
-
-  <p class="container-fluid p-3 my-2 border">
     <strong>Material:</strong>
     <%= @order.material %>
   </p>
@@ -28,13 +18,7 @@
     <strong>Masterbatch:</strong>
     <%= @order.masterbatch %>
   </p>
-
-
-  <p class="container-fluid p-3 my-2 border">
-    <strong>Size:</strong>
-    <%= @order.size %>
-  </p>
-
+  
   <p class="container-fluid p-3 my-2 border">
     <strong>Filler:</strong>
     <%= @order.filler %> %
@@ -51,8 +35,23 @@
   </p>
 
   <p class="container-fluid p-3 my-2 border">
+    <strong>Size:</strong>
+    <%= @order.size %>
+  </p>
+
+  <p class="container-fluid p-3 my-2 border">
+    <strong>Film Width:</strong>
+    <%= @order.film_width %> CM
+  </p>
+
+  <p class="container-fluid p-3 my-2 border">
+    <strong>Height:</strong>
+    <%= @order.height %> CM
+  </p>
+
+  <p class="container-fluid p-3 my-2 border">
     <strong>Packing Weight:</strong>
-    <%= @order.packing_weight %> KG
+    <%= @order.packing_weight %> KG/ Box
   </p>
 
   <p class="container-fluid p-3 my-2 border">
