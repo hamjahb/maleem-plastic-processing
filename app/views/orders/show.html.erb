@@ -11,7 +11,12 @@
 
   <p class="container-fluid p-3 my-2 border">
     <strong>Film Width In CM:</strong>
-    <%= @order.film_width %>
+    <%= @order.film_width %> CM
+  </p>
+
+  <p class="container-fluid p-3 my-2 border">
+    <strong>Height In CM:</strong>
+    <%= @order.height %> CM
   </p>
 
   <p class="container-fluid p-3 my-2 border">
@@ -24,14 +29,20 @@
     <%= @order.masterbatch %>
   </p>
 
+
+  <p class="container-fluid p-3 my-2 border">
+    <strong>Size:</strong>
+    <%= @order.size %>
+  </p>
+
   <p class="container-fluid p-3 my-2 border">
     <strong>Filler:</strong>
-    <%= @order.filler %>
+    <%= @order.filler %> %
   </p>
 
   <p class="container-fluid p-3 my-2 border">
     <strong>Thickness:</strong>
-    <%= @order.filler %> Micron
+    <%= @order.thickness %> Micron
   </p>
 
   <p class="container-fluid p-3 my-2 border">
@@ -40,28 +51,55 @@
   </p>
 
   <p class="container-fluid p-3 my-2 border">
-    <strong>Size:</strong>
-    <%= @order.size %>
+    <strong>Packing Weight:</strong>
+    <%= @order.packing_weight %> KG
   </p>
 
   <p class="container-fluid p-3 my-2 border">
     <strong>Order weight kg:</strong>
-    <%= @order.order_weight_kg %>
+    <%= @order.order_weight_kg %> KG
   </p>
+
+  <br>
+
+  <h3>Film:</h3>
 
   <p class="container-fluid p-3 my-2 border">
     <strong>Total film made:</strong>
-    <%= @order.total_film_made %>
+    <%= @order.total_film_made %> KG
+  </p>
+
+  <br>
+
+  <h3>Print:</h3>
+
+  <p class="container-fluid p-3 my-2 border">
+    <strong>Printed Complete:</strong>
+    <%= @order.print_complete %> KG
   </p>
 
   <p class="container-fluid p-3 my-2 border">
-    <strong>Total boxes:</strong>
-    <%= @order.total_boxes %>
+    <strong>Total Printed Weight:</strong>
+    <%= @order.total_printed_weight %> KG
   </p>
+  
+  <br>
+
+  <h3>Cut:</h3>
 
   <p class="container-fluid p-3 my-2 border">
     <strong>Gusset:</strong>
     <%= @order.gusset %>
+  </p>
+
+  <p class="container-fluid p-3 my-2 border">
+    <strong>Cut Complete:</strong>
+    <%= @order.cut_complete %>
+  </p>
+
+  <p class="container-fluid p-3 my-2 border">
+    <strong>Total boxes:</strong>
+    <%= @order.total_boxes %> Boxes
   </p>
 
   <p class="container-fluid p-3 my-2 border">
