@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   # resources :orders
   # resources :rolls
@@ -22,6 +23,11 @@ Rails.application.routes.draw do
   get 'cuttings/view', to: 'cuttings#view'
   get 'cuttings/edit', to: 'cuttings#edit'
   patch 'cuttings/:id', to: 'cuttings#update'
+
+  get 'deliveries', to: 'deliveries#index'
+  get 'deliveries/view', to: 'deliveries#view'
+  get 'deliveries/edit', to: 'deliveries#edit'
+  patch 'deliveries/:id', to: 'deliveries#update'
   
 
   root 'welcome#index'
