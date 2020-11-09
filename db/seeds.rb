@@ -32,5 +32,7 @@ Roll.create(order_id: 1, machine_number: 2, roll_weight: 350, operator_name: "Fu
 
 Roll.create(order_id: 1, machine_number: 3, roll_weight: 274, operator_name: "Gang Green Gang", roll_print_complete: true, printed_weight:252 )
 
+Roll.create(order_id: 3, machine_number: 2, roll_weight: 560, operator_name: "Gang Green Gang", roll_print_complete: true, printed_weight:540 )
+
 
 
