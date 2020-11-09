@@ -1,6 +1,3 @@
-<h1>Deliveries#index</h1>
-<p>Find me in app/views/deliveries/index.html.erb</p>
-
 <p id="notice"><%= notice %></p>
 
 <h1>Active Delivery Orders</h1>
@@ -27,7 +24,7 @@
         <td><%= weight_of_cut_boxes(order.total_boxes, order.packing_weight) %> KG</td>
 
         <td> 
-          <%= link_to deliveries_view_path(order_id: order.id) do %>
+          <%= link_to deliveries_edit_path(id: order.id) do %>
             <button class="btn btn-outline-success">Deliver Order</button>
           <% end %>
         </td>
