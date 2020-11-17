@@ -1,8 +1,3 @@
-<h1>Deliveries#edit</h1>
-<p>Find me in app/views/deliveries/edit.html.erb</p>
-
-
-
 <%= form_with(model: @order, url:{:controller => 'deliveries', :action => 'update', :id => params[:id]} ,  local: true) do |form| %>
   <% if @order.errors.any? %>
     <div id="error_explanation">
