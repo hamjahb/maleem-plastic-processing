@@ -8,6 +8,7 @@
       <th>Roll ID</th>
       <th>Order ID</th>
       <th>Machine number</th>
+      <th>QA sample weight</th>
       <th>Roll weight</th>
       <th>Ink complete</th>
       <th>Gusset complete</th>
@@ -23,7 +24,8 @@
         <td><%= roll.id %></td>
         <td><%= roll.order_id %></td>
         <td><%= roll.machine_number %></td>
-        <td><%= roll.roll_weight %></td>
+        <td><%= roll.qa_sample_weight %> g</td>
+        <td><%= roll.roll_weight %> KG</td>
         <td><%= roll.roll_print_complete %></td>
         <td><%= roll.gusset_complete %></td>
         <td><%= roll.roll_cut_complete %></td>
