@@ -58,8 +58,6 @@
     </div>
 
 
-
-
     <div class="field container p-3 my-3 border text-center">
       <%= form.label :order_weight_kg, "Order Weight: " %>
       <%= form.number_field :order_weight_kg %> KG
@@ -93,6 +91,11 @@
     <div class="field container p-3 my-3 border text-center">
       <%= form.label :gusset %>
       <%= form.check_box :gusset %>
+    </div>
+
+    <div class="field container p-3 my-3 border text-center">
+      <%= form.label :reference_number, "Reference Number/ PO: " %>
+      <%= form.text_field :reference_number %>
     </div>
 
     <%
