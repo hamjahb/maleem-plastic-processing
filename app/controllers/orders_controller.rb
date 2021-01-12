@@ -69,6 +69,6 @@ class OrdersController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def order_params
-      params.require(:order).permit(:customer_name, :film_width, :material, :filler, :specifications, :size, :order_weight_kg, :total_film_made, :total_boxes, :gusset, :delivered, :thickness, :masterbatch, :unit_weight, :height, :packing_weight)
+      params.require(:order).permit(:customer_name, :film_width, :material, :filler, :specifications, :size, :order_weight_kg, :total_film_made, :total_boxes, :gusset, :delivered, :thickness, :masterbatch, :unit_weight, :height, :packing_weight, :reference_number)
     end
 end
