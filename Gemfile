@@ -28,6 +28,9 @@ gem 'jbuilder', '~> 2.7'
 # this gem for rails admin
 gem 'rails_admin', '~> 2.0'
 
+# gem for backup
+gem 'backup', '~> 5.0.0.beta.3'
+
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
 
