@@ -23,9 +23,14 @@ Things you may want to cover:
 
 * Deployment instructions
 
-* ...
+* Gems used
+- backup
+- rails admin
+- 
 
-
+* Backup 
+- config default back location
 
 * Known Bugs
 - after commit destroy order bug during call back
+- back is not dynmaic in all cases 
