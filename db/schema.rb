@@ -10,10 +10,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_01_12_122938) do
+ActiveRecord::Schema.define(version: 2021_03_01_192702) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "deliveries", force: :cascade do |t|
+    t.bigint "order_id", null: false
+    t.integer "quantity"
+    t.integer "delivery_note_number"
+    t.date "delivery_date"
+    t.string "driver_name"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["order_id"], name: "index_deliveries_on_order_id"
+  end
 
   create_table "orders", force: :cascade do |t|
     t.string "customer_name"
@@ -55,5 +66,6 @@ ActiveRecord::Schema.define(version: 2021_01_12_122938) do
     t.index ["order_id"], name: "index_rolls_on_order_id"
   end
 
+  add_foreign_key "deliveries", "orders"
   add_foreign_key "rolls", "orders"
 end
