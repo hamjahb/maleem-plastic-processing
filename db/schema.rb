@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_03_01_192702) do
+ActiveRecord::Schema.define(version: 2021_03_03_181256) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -48,6 +48,7 @@ ActiveRecord::Schema.define(version: 2021_03_01_192702) do
     t.integer "height", default: 0
     t.integer "packing_weight", default: 0
     t.string "reference_number"
+    t.integer "delivered_quantity", default: 0
   end
 
   create_table "rolls", force: :cascade do |t|
