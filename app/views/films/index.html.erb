@@ -12,8 +12,7 @@
       <th>Height</th>
       <th>Thickness</th>
       <th>Unit Weight</th>
-      <th>Filler</th>
-      <th>Order weight</th>
+      <th>Film to Produce</th>
       <th>Total Film Made</th>
       <th colspan="2"></th>
     </tr>
@@ -29,8 +28,7 @@
         <td><%= order.height %> CM</td>
         <td><%= order.thickness %> Micron</td>
         <td><%= calculate_unit_weight(order.thickness, order.film_width, order.height) %> g</td>
-        <td><%= order.filler %> %</td>
-        <td><%= order.order_weight_kg %> KG</td>
+        <td><%= order.film_to_produce %> KG</td>
         <td><%= order.total_film_made %> KG</td>
 
         <td> 
