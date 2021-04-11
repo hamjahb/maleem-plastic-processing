@@ -1,7 +1,9 @@
 class CuttingsController < ApplicationController
   def index
-    @orders = Order.where(print_complete: true)
-    @orders = @orders.where(cut_complete: false).order(:id)
+    # @orders = Order.where(print_complete: true)
+    # @orders = @orders.where(cut_complete: false).order(:id)
+
+    @orders = Order.where(cut_complete: false).order(:id)
   end
 
   def view
