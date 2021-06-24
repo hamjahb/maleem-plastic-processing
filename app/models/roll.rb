@@ -35,7 +35,7 @@ class Roll < ApplicationRecord
     order.update(total_boxes: sum_of_cut_rolls)
   end
 
-  # if there are no more rolls to be printed in an order complete printing
+  # if there are no more rolls to be cut in an order complete cutting
   def update_order_done_cutting
     all_order_rolls = Roll.where(order_id: order_id)
     if all_order_rolls.where('roll_cut_complete = ?', false).count == 0
