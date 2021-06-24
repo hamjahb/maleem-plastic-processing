@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Order:</strong>
+  <%= @delivery.order_id %>
+</p>
+
+<p>
+  <strong>Quantity:</strong>
+  <%= @delivery.quantity %>
+</p>
+
+<p>
+  <strong>Delivery note number:</strong>
+  <%= @delivery.delivery_note_number %>
+</p>
+
+<p>
+  <strong>Delivery date:</strong>
+  <%= @delivery.delivery_date %>
+</p>
+
+<p>
+  <strong>Driver name:</strong>
+  <%= @delivery.driver_name %>
+</p>
+
+<%= link_to 'Edit', edit_delivery_path(@delivery) %> |
+<%= link_to 'Back', deliveries_path %>

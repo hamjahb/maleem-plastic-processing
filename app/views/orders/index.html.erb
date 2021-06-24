@@ -28,6 +28,8 @@
       <th>Total boxes</th>
       <th>Gusset</th>
       <th>Delivered</th>
+      <th>Delivered Quantity</th>
+      <th>Reference Number/ PO</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -58,6 +60,8 @@
         <td><%= order.total_boxes %></td>
         <td><%= order.gusset %></td>
         <td><%= order.delivered %></td>
+        <td><%= order.delivered_quantity %> KG</td>
+        <td><%= order.reference_number %></td>
 
         <td> 
           <%= link_to order do %>

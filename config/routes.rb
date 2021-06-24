@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
 
+  resources :deliveries
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   # resources :orders
   # resources :rolls

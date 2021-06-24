@@ -1,41 +1,51 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Active Delivery Orders</h1>
+<h1>Deliveries</h1>
 
-<table class="table table-striped  table-hover table-bordered">
+<table  class="table table-striped  table-hover table-bordered">
   <thead>
-    <tr class="text-center">
-      <th>Customer</th>
-      <th>Specifications</th>
-      <th>Order weight</th>
-      <th>Total Boxes Complete</th>
-      <th>Total Boxed Weight</th>
-      <th colspan="2"></th>
+    <tr>
+      <th>Order ID</th>
+      <th>Quantity</th>
+      <th>Delivery note number</th>
+      <th>Delivery date</th>
+      <th>Driver name</th>
+      <th colspan="3"></th>
     </tr>
   </thead>
 
   <tbody>
-    <% @orders.each do |order| %>
-      <tr class="text-center">
-        <td><%= order.customer_name %></td>
-        <td><%= order.specifications %></td>
-        <td><%= order.order_weight_kg %> KG</td>
-        <td><%= order.total_boxes %> Boxes</td>
-        <td><%= weight_of_cut_boxes(order.total_boxes, order.packing_weight) %> KG</td>
-
+    <% @deliveries.each do |delivery| %>
+      <tr>
+        <td><%= delivery.order_id %></td>
+        <td><%= delivery.quantity %> KG</td>
+        <td><%= delivery.delivery_note_number %></td>
+        <td><%= delivery.delivery_date %></td>
+        <td><%= delivery.driver_name %></td>
         <td> 
-          <%= link_to deliveries_edit_path(id: order.id) do %>
-            <button class="btn btn-outline-success">Deliver Order</button>
+          <%= link_to delivery do %>
+            <button class="btn btn-outline-info">Delivery Info</button>
           <% end %>
         </td>
 
         <td> 
-          <%= link_to order do %>
-            <button class="btn btn-outline-info" >Order Details</button>
+          <%= link_to edit_delivery_path(delivery) do %>
+            <button class="btn btn-outline-warning">Edit Delivery</button>
           <% end %>
         </td>
-        
+
+        <td> 
+          <%= link_to delivery, method: :delete, data: { confirm: 'Are you sure?' } do %>
+            <button class="btn btn-outline-danger">Delete Delivery</button>
+          <% end %>
+        </td>
       </tr>
     <% end %>
   </tbody>
 </table>
+
+<br>
+
+<%= link_to new_delivery_path  do %>
+  <button class="btn btn-success">New Delivery</button>
+<% end %>
